@@ -490,13 +490,15 @@ img {
     padding-bottom: 8px;
     padding-left: 16px;
     outline: none;
-    transition: filter 250ms cubic-bezier(0.4, 0, 0.2, 1), outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: filter 250ms cubic-bezier(0.4, 0, 0.2, 1), outline 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 
 .form-input:focus {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     outline: #4D5AE5;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+
 }
 
 .footer-text-form {
@@ -539,7 +541,7 @@ img {
     letter-spacing: 0.04em;
     color: #FFFFFF;
     margin-left: 24px;
-    padding: 8px, 24px;
+    padding: 8px 24px;
 
     width: 165px;
     height: 40px;
@@ -683,7 +685,7 @@ img {
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+    cursor: pointer;
 }
 
 
@@ -691,7 +693,7 @@ img {
 .btn-close:focus {
     background: #404BBF;
     fill: #FFFFFF;
-    cursor: pointer;
+    
 }
 
 
@@ -702,7 +704,7 @@ img {
 }
 
 .btn-close:is(:hover, :focus) .close-icon {
-    background: #404BBF;
+    
     fill: #FFFFFF;
 }
 
@@ -732,12 +734,6 @@ img {
     margin-bottom: 8px;
 }
 
-/* .form-wrapper {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%,);
-} */
 
 .form-field label {
     font-weight: 400;
@@ -776,8 +772,7 @@ img {
 .form-icon-name {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translateY(-50%);
     
     left: 16px;
     fill: #2E2F42;
@@ -787,8 +782,7 @@ img {
 .form-icon {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
 
     left: 16px;
     fill: #2E2F42;
